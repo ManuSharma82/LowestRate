@@ -54,6 +54,80 @@ header{
 
 /* TOP CATS */
 /* CATEGORY SECTION */
+/* Container styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.sec-h {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Grid for the top Category cards */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cat-card {
+  text-align: center;
+  background-color: #f8f9fa; /* Light background behind cards */
+  padding-bottom: 10px;
+}
+
+.cat-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Keeps images perfectly square */
+  object-fit: cover;
+  background-color: #6ed3cf; /* Matches the teal-ish background in image */
+  display: block;
+}
+
+.cat-card p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Row for the bottom round-style or smaller cards */
+.rcats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+}
+
+.rcat {
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+}
+
+.rcat img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Makes them circular if you prefer that look */
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.rcat-lbl {
+  font-size: 14px;
+  font-weight: 500;
+}
+
 /* FULL WIDTH CATEGORY */
 .top-cats{
   width:100%;
