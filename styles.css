@@ -1,0 +1,875 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --orange:#ff6b00;--orange2:#ff8c00;
+  --white:#fff;--bg:#f5f5f5;--card:#fff;
+  --text:#222;--muted:#777;--border:#e8e8e8;
+  --teal:#00b8b8;--blue-c:#5b8dee;--pink:#f8b8c0;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text)}
+
+/* HEADER */
+header{
+  background:#fff;border-bottom:1px solid var(--border);
+  padding:0 24px;height:68px;display:flex;align-items:center;
+  gap:20px;position:sticky;top:0;z-index:200;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+.logo{
+  font-family:'Nunito',sans-serif;font-weight:900;font-size:1.6rem;
+  white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:3px;
+}
+.logo .icon{font-size:1.2rem;margin-right:2px}
+.logo .lo{color:var(--orange)}.logo .we{color:#222}.logo .st{color:var(--orange)}.logo .rt{color:#222}.logo .e2{color:var(--orange)}
+
+.search-bar{
+  flex:1;max-width:500px;display:flex;
+  border:1.5px solid #ddd;border-radius:6px;overflow:hidden;background:#fafafa;
+}
+.search-bar input{
+  flex:1;padding:9px 13px;border:none;outline:none;
+  font-family:'DM Sans',sans-serif;font-size:.87rem;background:transparent;
+}
+.search-bar input::placeholder{color:#bbb}
+.search-bar button{
+  background:var(--orange);border:none;padding:9px 14px;cursor:pointer;
+  color:#fff;font-size:.95rem;transition:background .2s;
+}
+.search-bar button:hover{background:var(--orange2)}
+
+.h-right{margin-left:auto;display:flex;align-items:center;gap:18px}
+.h-link{font-size:.84rem;color:#444;font-weight:500;cursor:pointer;text-decoration:none}
+.h-link:hover{color:var(--orange)}
+.cart-btn{
+  display:flex;align-items:center;gap:7px;
+  border:1.5px solid #ddd;border-radius:6px;
+  padding:7px 15px;cursor:pointer;background:#fff;
+  font-size:.84rem;font-weight:600;transition:border-color .2s;
+}
+.cart-btn:hover{border-color:var(--orange);color:var(--orange)}
+.cart-btn .cnt{
+  background:var(--orange);color:#fff;border-radius:50%;
+  width:18px;height:18px;font-size:.68rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* TOP CATS */
+/* CATEGORY SECTION */
+/* FULL WIDTH CATEGORY */
+.top-cats{
+  width:100%;
+  display:flex;
+  justify-content:space-between;   /* spread full width */
+  align-items:center;
+  padding:15px 30px;
+  background:#fff;
+  border-bottom:1px solid #eee;
+  overflow-x:auto;
+  gap:20px;
+}
+
+/* CATEGORY ITEM */
+.tc{
+  flex:1;                    /* equal width */
+  min-width:100px;
+  text-align:center;
+  cursor:pointer;
+  transition:transform 0.2s;
+}
+
+.tc:hover{
+  transform:translateY(-4px);
+}
+
+/* IMAGE BOX (BIG ICONS 🔥) */
+.tc-img{
+  width:100%;
+  height:80px;              /* bigger height */
+  background:#fff;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+/* IMAGE */
+.tc-img img{
+  width:80%;                /* control size */
+  height:80%;
+  object-fit:contain;
+  transition:transform 0.3s;
+}
+
+/* HOVER */
+.tc:hover img{
+  transform:scale(1.15);
+}
+
+/* LABEL */
+.tc-lbl{
+  font-size:14px;
+  margin-top:8px;
+  color:#333;
+  font-weight:600;
+}
+
+
+/* ================= MOBILE ================= */
+/* TABLET */
+@media (max-width:1024px){
+  .tc-img{
+    height:70px;
+  }
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  .top-cats{
+    justify-content:flex-start;
+    overflow-x:auto;
+  }
+
+  .tc{
+    flex:0 0 auto;
+    min-width:90px;
+  }
+
+  .tc-img{
+    height:60px;
+  }
+
+  .tc-lbl{
+    font-size:12px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width:480px){
+
+  .tc{
+    min-width:75px;
+  }
+
+  .tc-img{
+    height:50px;
+  }
+
+  .tc-lbl{
+    font-size:10px;
+  }
+}
+
+/* BANNER */
+/* BANNER */
+.banner{
+  position:relative;
+  overflow:hidden;
+  height:400px;   /* 🔥 increased height */
+}
+
+/* SLIDES */
+.b-slides{
+  display:flex;
+  height:100%;
+  transition:transform 0.5s ease;
+}
+
+.b-slide{
+  min-width:100%;
+  height:100%;
+  position:relative;
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  padding:0 60px;
+}
+
+/* DARK OVERLAY (premium look) */
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+}
+
+/* TEXT */
+.b-text{
+  position:relative;
+  color:#fff;
+  max-width:500px;
+}
+
+.b-text h2{
+  font-size:2.5rem;
+  font-weight:800;
+}
+
+.b-text .hl{
+  color:#ff6b00;
+}
+
+.b-text p{
+  margin:10px 0;
+  font-size:1rem;
+}
+
+/* BUTTON */
+.b-btn{
+  background:#ff6b00;
+  border:none;
+  padding:10px 20px;
+  color:#fff;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.b-btn:hover{
+  background:#ff8c00;
+}
+
+/* ARROWS */
+.b-arr{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  border:none;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.b-prev{left:15px;}
+.b-next{right:15px;}
+
+/* DOTS */
+.b-dots{
+  position:absolute;
+  bottom:10px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:5px;
+}
+
+.bd{
+  width:8px;
+  height:8px;
+  background:#ccc;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.bd.on{
+  background:#fff;
+}
+@media (max-width:768px){
+
+  .banner{
+    height:250px;
+  }
+
+  .b-text h2{
+    font-size:1.5rem;
+  }
+
+  .b-text p{
+    font-size:0.8rem;
+  }
+
+  .b-slide{
+    padding:20px;
+  }
+}
+/* SECTION TITLE */
+/* SECTION */
+.sec-h{
+  text-align:center;
+  font-size:24px;
+  font-weight:800;
+  margin:30px 0 10px;
+  color:#222;
+}
+.rcats{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:20px;
+}
+
+/* CARD */
+.rcat{
+  width:180px;
+  background:#fff;
+  border:2px solid #f8b8c0;
+  border-radius:12px;
+  padding:12px;
+  text-align:center;
+  cursor:pointer;
+  transition:all 0.3s;
+}
+
+/* IMAGE */
+.rcat img{
+  width:100%;
+  height:120px;
+  object-fit:contain;
+}
+
+/* HOVER */
+.rcat:hover{
+  transform:translateY(-6px);
+  border-color:#ff6b00;
+  box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* LABEL */
+.rcat-lbl{
+  margin-top:10px;
+  font-size:14px;
+  font-weight:600;
+}
+/* CIRCLE CATS CONTAINER */
+.ccats {
+    display: flex;
+    justify-content: space-between; /* Spreads items full width */
+    align-items: center;
+    padding: 40px 5%;            /* Padding on sides for breathing room */
+    background: #fff;
+    flex-wrap: nowrap;           /* Keeps them in one line */
+    overflow-x: auto;            /* Allows scrolling on mobile */
+    gap: 20px;
+    scrollbar-width: none;       /* Hide scrollbar Firefox */
+}
+
+.ccats::-webkit-scrollbar {
+    display: none;               /* Hide scrollbar Chrome/Safari */
+}
+
+/* INDIVIDUAL CATEGORY ITEM */
+.ccat {
+    flex: 1;                     /* Makes each item take equal space */
+    min-width: 120px;            /* Ensures they don't get too small */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* THE CIRCLE BOX */
+.cc-img {
+    width: 130px;                /* Increased size */
+    height: 130px;               /* Increased size */
+    margin: 0 auto;              /* Centers the circle in its space */
+    border-radius: 50%;
+    background: #f8f9fa;         /* Light grey for a clean look */
+    border: 2px solid #eee;      /* Soft border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+/* THE IMAGE INSIDE */
+.cc-img img {
+    width: 75%;                  /* Control icon/product size */
+    height: 75%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+/* LABEL BELOW THE CIRCLE */
+.cc-lbl {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0.3px;
+}
+/* HOVER EFFECTS */
+.ccat:hover img {
+    transform: scale(1.1);
+}
+
+.ccat:hover .cc-lbl {
+    color: var(--orange);
+}
+/*----------------------------FOOTER------------------------*/
+.main-footer {
+    background-color: #ffffff;
+    padding: 80px 5% 40px 5%; /* Top padding 80px creates the height */
+    border-top: 1px solid #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+/* --- SOCIAL ICON STYLING --- */
+.social-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover { transform: translateY(-5px); }
+
+/* Brands Colors */
+.fb { background-color: #3b5998; }
+.tw { background-color: #1da1f2; }
+.yt { background-color: #ff0000; }
+.ln { background-color: #0077b5; }
+.pin { background-color: #bd081c; }
+
+/* --- CONTACT STYLING --- */
+.brand-text {
+    color: #d11f52;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.pink-text {
+    color: #d11f52;
+    font-weight: bold;
+}
+
+.info-text {
+    margin: 12px 0;
+    font-size: 15px;
+}
+
+.wa-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #d11f52;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #d11f52;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+
+/* Increased height and spacing for the column */
+.scanner-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* Adds vertical space between elements */
+}
+
+/* Styling the Payment Strip */
+.payment-strip {
+    max-width: 280px; /* Adjust based on your image width */
+    height: auto;
+    filter: grayscale(20%); /* Optional: makes it look more professional */
+    transition: filter 0.3s;
+}
+
+.payment-strip:hover {
+    filter: grayscale(0%);
+}
+
+/* QR Code Section Styling */
+.qr-wrapper {
+    text-align: center;
+    background: #fdfdfd;
+    padding: 15px;
+    border: 1px dashed #d11f52; /* Matching your theme color */
+    border-radius: 10px;
+}
+
+.qr-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.qr-frame {
+    background: white;
+    padding: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.qr-img {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.wa-direct-link {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #25d366; /* WhatsApp Green */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.wa-direct-link:hover {
+    text-decoration: underline;
+}
+
+/* CARD */
+.cat-card{
+  text-align:center;
+  cursor:pointer;
+  transition:all 0.3s;
+}
+
+/* IMAGE */
+.cat-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:6px;
+}
+
+/* TITLE */
+.cat-card p{
+  margin-top:10px;
+  font-size:16px;
+  font-weight:600;
+}
+
+/* HOVER */
+.cat-card:hover{
+  transform:translateY(-5px);
+}
+
+
+/* PRODUCT CARDS */
+
+/* GRID */
+.trend-banner{
+  display:flex;
+  gap:20px;
+  padding:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* CARD */
+.trend-card{
+  width:260px;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  text-align:center;
+  transition:all 0.3s;
+}
+
+/* IMAGE */
+.trend-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+/* TEXT */
+.trend-card p{
+  padding:10px;
+  font-weight:600;
+}
+
+/* HOVER */
+.trend-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+@media (max-width:768px){
+  .trend-card{
+    width:45%;
+  }
+}
+
+@media (max-width:480px){
+  .trend-card{
+    width:100%;
+  }
+}
+/*-------------video section---------------*/
+/* --- VIDEO SECTION CONTAINER --- */
+/* --- VIDEO & FEEDBACK SECTIONS --- */
+.trend-h {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;        /* Slightly larger for hierarchy */
+    color: #1a1a1a;           /* Deep black for premium feel */
+    text-align: center;
+    text-transform: uppercase; /* Professional look */
+    letter-spacing: 1px;      /* Better readability */
+    position: relative;
+    padding-bottom: 15px;     /* Space for the accent line */
+    margin: 40px auto 5px;    /* Centered with top breathing room */
+}
+.trend-h::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px; /* Small, modern accent line */
+  height: 4px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+/* The Subtitle */
+.trend-sub {
+    text-align:center;
+  position: center;
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* --- OPTIONAL: Container Adjustment --- */
+
+.vs {
+    background: #fff;
+    padding: 40px 0 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Header Styling: Clean & Minimal */
+.vs .trend-h {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #111;
+    text-align: center;
+    padding: 0 24px;
+    margin-bottom: 4px;
+}
+
+.vs .trend-sub {
+    font-size: 0.85rem;
+    color: #666;
+    padding: 0 24px;
+    margin-bottom: 20px;
+}
+
+/* Horizontal Scroll: Netflix Style */
+.vrow {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 0 24px 10px;
+    scrollbar-width: none; /* Firefox */
+}
+
+.vrow::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+/* Video Card */
+.vc {
+    flex: 0 0 200px; /* Fixed width for consistency */
+    transition: transform 0.3s ease;
+}
+
+.vc:hover { transform: translateY(-4px); }
+
+/* Thumbnail: Modern look with rounded corners and overlay */
+.vthumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+/* Minimalist Play Button */
+.vplay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.2);
+    color: #fff;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.vc:hover .vplay {
+    background: rgba(255,107,0,0.4); /* Subtle orange tint on hover */
+    font-size: 1.8rem;
+}
+
+/* Typography */
+.v-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-top: 12px;
+    color: #222;
+}
+
+.v-sub {
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Compact Button: Outline style looks more expensive */
+.v-btn {
+    width: 100%;
+    padding: 8px;
+    border: 1.5px solid #eee;
+    background: transparent;
+    color: #444;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.v-btn:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+    background: rgba(255,107,0,0.05);
+}
+/* FOOTER */
+/* BACK TO TOP */
+.back-top{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:12px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+  background:#f5f5f5;
+  padding:30px 20px;
+}
+
+/* GRID */
+.f-container{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+/* COLUMN */
+.f-col{
+  min-width:200px;
+}
+
+/* HEADINGS */
+.f-col h4{
+  margin-bottom:10px;
+  font-size:16px;
+}
+
+/* LIST */
+.f-col ul{
+  list-style:none;
+}
+
+.f-col ul li{
+  margin:6px 0;
+}
+
+/* LINKS */
+.f-col ul li a{
+  text-decoration:none;
+  color:#c2185b;   /* pink like screenshot */
+  font-size:14px;
+}
+
+.f-col ul li a:hover{
+  text-decoration:underline;
+}
+/* TOAST */
+.toast{
+  position:fixed;bottom:22px;right:22px;
+  background:#1a1a1a;color:#fff;padding:10px 16px;border-radius:7px;
+  font-size:.81rem;font-weight:500;z-index:9999;
+  opacity:0;transform:translateY(6px);
+  transition:opacity .22s,transform .22s;pointer-events:none;
+  border-left:3px solid var(--orange);
+}
+.toast.on{opacity:1;transform:translateY(0)}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Base style for every box */
+/* Style for 2-image boxes (Left & Right) */
+.box.two img {
+  width: calc(50% - 5px); /* Half width minus half the gap */
+  height: auto;
+  object-fit: cover;
+}
+
+/* Style for 4-image boxes (Grid) */
+
+/* Container for the 4-image row */
+.box.four {
+  display: flex;
+  flex-direction: row; /* Ensures they stay in a line */
+  gap: 10px;
+  width: 100%; /* Or set a specific max-width if preferred */
+}
+
+/* Make each of the 4 images take up 1/4th of the row */
+.box.four img {
+  /* Calculation: 25% width minus a bit of the gap space */
+  width: calc(25% - 8px); 
+  height: auto;
+  object-gap: cover;
+  border-radius: 4px; /* Optional: adds a nice rounded look */
+}

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - LowestRate Shopping</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <span class="icon">≡↓</span>
+    <span class="lo">lowest</span><span style="color:#888;font-size:.6em;margin:0 1px">&#8203;</span><span class="st">R</span><span class="rt">ate</span>
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search for products...">
+    <button>🔍</button>
+  </div>
+  <div class="h-right">
+    <a class="h-link">Login</a>
+    <a class="h-link">Sell</a>
+    <div class="cart-btn" onclick>🛒 Cart <span class="cnt" id="cc">0</span></div>
+  </div>
+</header>
+
+<!-- TOP CATEGORY ROW -->
+<div class="top-cats">
+
+  <div class="tc">
+    <div class="tc-img">
+      <img src="photos/img1.jpg"CPU">
+    </div>
+    <div class="tc-lbl">Tiny CPU</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-img">
+      <img src="photos/img2.avif" alt="Earbuds">
+    </div>
+    <div class="tc-lbl">Earbuds</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-img">
+      <img src="photos/Laptop.jpg" alt="Laptops">
+    </div>
+    <div class="tc-lbl">Laptops</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-img">
+      <img src="photos/moniter.avif" alt="Monitors">
+    </div>
+    <div class="tc-lbl">Monitors</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-img">
+      <img src="photos/keyboord.avif" alt="Keyboards">
+    </div>
+    <div class="tc-lbl">Keyboards</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-img">
+      <img src="photos/img2.avif" alt="Headphones">
+    </div>
+    <div class="tc-lbl">Head phones</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-img">
+      <img src="photos/img1.jpg" alt="Projectors">
+    </div>
+    <div class="tc-lbl">Projectors</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-img">
+      <img src="photos/Laptop.jpg" alt="Smart Watch">
+    </div>
+    <div class="tc-lbl">Smart watches</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-img">
+      <img src="photos/keyboord.avif" alt="AIO">
+    </div>
+    <div class="tc-lbl">AIO</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-img">
+      <img src="photos/img2.avif" alt="Soundbars">
+    </div>
+    <div class="tc-lbl">Soundbars</div>
+  </div>
+
+</div>
+<!-- BANNER SLIDER -->
+<div class="banner">
+  <div class="b-slides" id="bs">
+
+    <!-- SLIDE 1 -->
+    <div class="b-slide" style="background-image:url('photos/banner1.jfif')">
+      <div class="overlay"></div>
+      <div class="b-text">
+        <h2>Best Deals on<br><span class="hl">Gaming Gear</span></h2>
+        <p>RGB keyboards, headsets & more — lowest prices guaranteed</p>
+        <button class="b-btn">Shop Now →</button>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="b-slide" style="background-image:url('photos/banner4.avif')">
+      <div class="overlay"></div>
+      <div class="b-text">
+        <h2>Premium Laptops<br><span class="hl">Up to 30% OFF</span></h2>
+        <p>Dell, HP, Lenovo — No Cost EMI available</p>
+        <button class="b-btn">Explore Deals →</button>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="b-slide" style="background-image:url('photos/banner3.jpg!w700wp')">
+      <div class="overlay"></div>
+      <div class="b-text">
+        <h2>Earbuds Fest<br><span class="hl">Starting ₹999</span></h2>
+        <p>boAt, Noise, Realme — Best offers</p>
+        <button class="b-btn">Buy Now →</button>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="b-arr b-prev" onclick="mv(-1)">‹</button>
+  <button class="b-arr b-next" onclick="mv(1)">›</button>
+
+  <div class="b-dots">
+    <div class="bd on" onclick="go(0)"></div>
+    <div class="bd" onclick="go(1)"></div>
+    <div class="bd" onclick="go(2)"></div>
+  </div>
+</div>
+
+<!-- SHOP BY CATEGORY (rect, pink border) -->
+
+<!-- FEATURE CATEGORY GRID -->
+ <div class="sec-h">Shop by category</div>
+<div class="cat-grid">
+
+  <div class="cat-card">
+    <img src="photos/gaming_l.jpg">
+    <p>Gaming Accessories</p>
+  </div>
+
+  <div class="cat-card">
+    <img src="photos/keyboord.avif">
+    <p>Keyboards</p>
+  </div>
+
+  <div class="cat-card">
+    <img src="photos/laptopbags.jpg">
+    <p>Laptop Bags</p>
+  </div>
+
+  <div class="cat-card">
+    <img src="photos/table_accessories.jpg">
+    <p>Tablet Accessories</p>
+  </div>
+
+  <div class="cat-card">
+    <img src="photos/laptop_table.jpg">
+    <p>Laptop Tables</p>
+  </div>
+
+  <div class="cat-card">
+    <img src="photos/mice.jpg">
+    <p>Mice</p>
+  </div>
+
+  <div class="cat-card">
+    <img src="photos/cable.jpg">
+    <p>Cables</p>
+  </div>
+
+  <div class="cat-card">
+    <img src="photos/hubsandport.jpg">
+    <p>Hubs & Port Replicators</p>
+  </div>
+
+</div>
+
+<div class="sec-h"></div>
+
+<div class="rcats">
+
+  <div class="rcat">
+    <img src="photos/accessories.jpg">
+    <div class="rcat-lbl">Computer accessories</div>
+  </div>
+
+  <div class="rcat">
+    <img src="photos/pen_drive.jpg">
+    <div class="rcat-lbl">Pen drives</div>
+  </div>
+
+  <div class="rcat">
+    <img src="photos/Office-products.jpg">
+    <div class="rcat-lbl">Office products</div>
+  </div>
+
+  <div class="rcat">
+    <img src="photos/Memory-cards.jpg">
+    <div class="rcat-lbl">Memory cards</div>
+  </div>
+
+  <div class="rcat">
+    <img src="photos/Hard-drives-SSD.jpg">
+    <div class="rcat-lbl">Hard drives & SSDs</div>
+  </div>
+
+  <div class="rcat">
+    <img src="photos/Components.jpg">
+    <div class="rcat-lbl">Components</div>
+  </div>
+
+</div>
+<!-- ================= ROUND CATEGORY ================= -->
+<!-- CIRCLE CATS -->
+<div class="ccats">
+
+  <div class="ccat">
+    <div class="cc-img"><img src="photos/img2.avif"></div>
+    <div class="cc-lbl">Earbuds</div>
+  </div>
+
+  <div class="ccat">
+    <div class="cc-img"><img src="photos/img1.jpg"></div>
+    <div class="cc-lbl">Smartwatches</div>
+  </div>
+
+  <div class="ccat">
+    <div class="cc-img"><img src="photos/accessories.jpg"></div>
+    <div class="cc-lbl">Computer Accessories</div>
+  </div>
+
+  <div class="ccat">
+    <div class="cc-img"><img src="photos/Laptop.jpg"></div>
+    <div class="cc-lbl">Tablets</div>
+  </div>
+
+  <div class="ccat">
+    <div class="cc-img"><img src="photos/Hard-drives-SSD.jpg"></div>
+    <div class="cc-lbl">Laptops</div>
+  </div>
+
+  <div class="ccat">
+    <div class="cc-img"><img src="photos/Laptop.jpg"></div>
+    <div class="cc-lbl">Gaming Laptops</div>
+  </div>
+
+</div>
+
+<!------------Tranding photos-------------->
+<!-- TRENDING PRODUCTS -->
+<div class="trend-h">New & Trending Laptops</div>
+<div class="trend-sub">Top brands, best performance</div>
+
+<div class="multi-grid">
+
+  <div class="box two">
+    <img src="photos/1.jpg" alt="Laptop 1">
+    <img src="photos/1.2.jpg" alt="Laptop 1.2">
+  </div>
+
+  <div class="box two">
+    <img src="photos/2.jpg" alt="Laptop 2">
+    <img src="photos/2.2.jpg" alt="Laptop 2.2">
+  </div>
+
+  <div class="box four">
+    <img src="photos/3.jpg">
+    <img src="photos/3.1.jpg">
+    <img src="photos/3.3.jpg">
+    <img src="photos/3.4.jpg">
+  </div>
+
+  <div class="box two">
+    <img src="photos/4.jpg">
+    <img src="photos/4.2.jpg">
+  </div>
+
+</div>
+
+<!-- OPTIONAL: PRODUCT CARDS -->
+<div class="trend-banner">
+
+  <div class="trend-card">
+    <img src="photos/22.jpg">
+    <p>Alienware m16 R2</p>
+  </div>
+
+  <div class="trend-card">
+    <img src="photos/Laptop.jpg">
+    <p>Asus ZenBook</p>
+  </div>
+
+  <div class="trend-card">
+    <img src="photos/23.jpg">
+    <p>Acer Swift GO</p>
+  </div>
+
+  <div class="trend-card">
+    <img src="photos/gaminglaptop.png">
+    <p>Asus VivoBook</p>
+  </div>
+
+</div>
+
+
+<!-- ================= PRODUCT VIDEOS ================= -->
+<!-- PRODUCT VIDEOS -->
+<div class="vs">
+  <div class="trend-h" style="margin:0 0 3px;border:none;padding:12px 0 3px">Product Videos</div>
+  <div class="trend-sub" style="margin-bottom:12px">Watch before you buy</div>
+  <div class="vrow">
+    <div class="vc">
+  <div class="vthumb">
+    <video class="video" src="videos/product_video1.mp4"></video>
+    <div class="vplay">▶</div>
+  </div>
+  <div class="v-name">HP 840 G5</div>
+  <div class="v-sub">0:32 • Product demo</div>
+  <button class="v-btn" onclick="ac(this,'HP 840 G5')">🛒 Add to Cart</button>
+</div>
+<div class="vc">
+  <div class="vthumb">
+    <video class="video" src="videos/product_video2.mp4"></video>
+    <div class="vplay">▶</div>
+  </div>
+  <div class="v-name">HP 840 G5</div>
+  <div class="v-sub">0:32 • Product demo</div>
+  <button class="v-btn" onclick="ac(this,'HP 840 G5')">🛒 Add to Cart</button>
+</div>
+<div class="vc">
+  <div class="vthumb">
+    <video class="video" src="videos/product_video3.mp4"></video>
+    <div class="vplay">▶</div>
+  </div>
+  <div class="v-name">X1 Lenovo</div>
+  <div class="v-sub">0:32 • Product demo</div>
+  <button class="v-btn" onclick="ac(this,'HP 840 G5')">🛒 Add to Cart</button>
+</div>
+<div class="vc">
+  <div class="vthumb">
+    <video class="video" src="videos/product_video4.mp4"></video>
+    <div class="vplay">▶</div>
+  </div>
+  <div class="v-name">Dell 7390</div>
+  <div class="v-sub">0:32 • Product demo</div>
+  <button class="v-btn" onclick="ac(this,'HP 840 G5')">🛒 Add to Cart</button>
+</div>
+<div class="vc">
+  <div class="vthumb">
+    <video class="video" src="videos/product_video5.mp4"></video>
+    <div class="vplay">▶</div>
+  </div>
+  <div class="v-name">HP Tiny CPU</div>
+  <div class="v-sub">0:32 • Product demo</div>
+  <button class="v-btn" onclick="ac(this,'HP 840 G5')">🛒 Add to Cart</button>
+</div>
+<div class="vc">
+  <div class="vthumb">
+    <video class="video" src="videos/product_video6.mp4"></video>
+    <div class="vplay">▶</div>
+  </div>
+  <div class="v-name">HP 840 G5</div>
+  <div class="v-sub">0:32 • Product demo</div>
+  <button class="v-btn" onclick="ac(this,'HP 840 G5')">🛒 Add to Cart</button>
+</div>
+    </div>
+  </div>
+<!-- ================= CUSTOMER FEEDBACK ================= -->
+<!-- CUSTOMER FEEDBACKS -->
+<div class="vs" style="margin-top:0;border-top:4px solid #f0f0f0">
+  <div class="trend-h" style="margin:0 0 3px;border:none;padding:12px 0 3px">Customer Feedbacks</div>
+  <div class="trend-sub" style="margin-bottom:12px">Real customers, real reviews</div>
+  <div class="vrow">
+    <div class="vc">
+  <div class="vthumb">
+    <video class="video" src="videos/Custumer_feedback1.mp4"></video>
+    <div class="vplay">▶</div>
+  </div>
+  <div class="v-name">HP EliteBook 840 G5</div>
+  <div class="v-sub">1:22 • Customer review</div>
+  <button class="v-btn" onclick="ac(this,'HP EliteBook 840 G5')">🛒 Add to Cart</button>
+</div>
+<div class="vc">
+  <div class="vthumb">
+    <video class="video" src="videos/Custumer_feedback2.mp4"></video>
+    <div class="vplay">▶</div>
+  </div>
+  <div class="v-name">HP14S i5 10th Gen</div>
+  <div class="v-sub">1:03 • Customer review</div>
+  <button class="v-btn" onclick="ac(this,'HP EliteBook 840 G5')">🛒 Add to Cart</button>
+</div>
+<div class="vc">
+  <div class="vthumb">
+    <video class="video" src="videos/Custumer_feedback3.mp4"></video>
+    <div class="vplay">▶</div>
+  </div>
+  <div class="v-name">ZEBRONICS (55 inch)</div>
+  <div class="v-sub">1:03 • Customer review</div>
+  <button class="v-btn" onclick="ac(this,'HP EliteBook 840 G5')">🛒 Add to Cart</button>
+</div>
+<div class="vc">
+  <div class="vthumb">
+    <video class="video" src="videos/Custumer_feedback4.mp4"></video>
+    <div class="vplay">▶</div>
+  </div>
+  <div class="v-name">Dell Latitude 5510</div>
+  <div class="v-sub">1:03 • Customer review</div>
+  <button class="v-btn" onclick="ac(this,'HP EliteBook 840 G5')">🛒 Add to Cart</button>
+</div>
+<div class="vc">
+  <div class="vthumb">
+    <video class="video" src="videos/Custumer_feedback5.mp4"></video>
+    <div class="vplay">▶</div>
+  </div>
+  <div class="v-name">Philips Audio TWS</div>
+  <div class="v-sub">1:03 • Customer review</div>
+  <button class="v-btn" onclick="ac(this,'HP EliteBook 840 G5')">🛒 Add to Cart</button>
+</div>
+<div class="vc">
+  <div class="vthumb">
+    <video class="video" src="videos/Custumer_feedback6.mp4"></video>
+    <div class="vplay">▶</div>
+  </div>
+  <div class="v-name">Philips Audio TWS</div>
+  <div class="v-sub">1:03 • Customer review</div>
+  <button class="v-btn" onclick="ac(this,'HP EliteBook 840 G5')">🛒 Add to Cart</button>
+</div>
+   </div>
+</div>
+<!------Header------->
+
+<footer class="main-footer">
+    <div class="footer-top-accent"></div>
+    
+    <div class="footer-content">
+        <div class="footer-column">
+            <h4 class="footer-title">Keep In Touch</h4>
+            <div class="social-box">
+                <a href="#" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="icon tw"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="icon yt"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="icon ln"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="icon pin"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column contact-center">
+            <h2 class="brand-text">LowestRate Shopping🛍️</h2>
+            <p class="info-text">📍 811, 8th Floor, Deepali Building, Nehru Place, New Delhi 110019</p>
+            <p class="info-text pink-text">📞 875-0002-875 | 999-0089-892 | 971-804-0999</p>
+            <p class="info-text pink-text">📧 support@lowestrate.in | info@lowestrate.in</p>
+            <a href="#" class="wa-link">💬 Click to connect on WhatsApp</a>
+        </div>
+
+        <div class="footer-column scanner-section">
+    <h4 class="footer-title">100% Secure and Trusted Payment</h4>
+    
+    <div class="payment-methods">
+        <img src="https://i.imgur.com/8NnO8fH.png" alt="Visa Mastercard Rupay PCI" class="payment-strip">
+    </div>
+
+    <div class="qr-wrapper">
+        <p class="qr-label">Scan link to WhatsApp!</p>
+        <div class="qr-frame">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://wa.me/918750002875" alt="WhatsApp QR Code" class="qr-img">
+        </div>
+        <a href="#" class="wa-direct-link">Click to connect on WhatsApp</a>
+    </div>
+</div>
+    </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  Back to top
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="f-container">
+
+    <!-- COLUMN 1 -->
+    <div class="f-col">
+      <h4>Get to Know Us</h4>
+      <ul>
+        <li><a href="#">About LowestRate</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Repairing Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUMN 2 -->
+    <div class="f-col">
+      <h4>Connect with Us</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">X.com</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUMN 3 -->
+    <div class="f-col">
+      <h4>Make Money with Us</h4>
+      <ul>
+        <li><a href="#">Sell On LowestRate</a></li>
+        <li><a href="#">Become an Affiliate</a></li>
+        <li><a href="#">Advertise Your Products</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUMN 4 -->
+    <div class="f-col">
+      <h4>Let Us Help You</h4>
+      <ul>
+        <li><a href="#">Your Account</a></li>
+        <li><a href="#">Track your order</a></li>
+        <li><a href="#">100% Purchase Protection</a></li>
+        <li><a href="#">Refund & Return Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</footer>
+
+<div class="toast" id="toast">✅ <span id="tmsg">Added!</span></div>
+
+<script>
+// Banner
+let s=0,T=3,at;
+function go(n){s=n;document.getElementById('bs').style.transform=`translateX(-${s*100}%)`;document.querySelectorAll('.bd').forEach((d,i)=>d.classList.toggle('on',i===s))}
+function mv(d){go((s+d+T)%T);reset()}
+function reset(){clearInterval(at);at=setInterval(()=>mv(1),4500)}
+reset();
+
+// Cart
+let cn=0;
+function ac(btn,nm){
+  cn++;document.getElementById('cc').textContent=cn;
+  const o=btn.innerHTML;btn.innerHTML='✓ Added!';btn.classList.add('done');
+  setTimeout(()=>{btn.innerHTML=o;btn.classList.remove('done')},1400);
+  document.getElementById('tmsg').textContent=`"${nm}" added!`;
+  const t=document.getElementById('toast');
+  t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2400);
+}
+document.querySelectorAll(".vthumb").forEach((box) => {
+  box.addEventListener("click", () => {
+    let video = box.querySelector("video");
+
+    if (!video) return;
+
+    document.querySelectorAll("video").forEach(v => {
+      if (v !== video) v.pause();
+    });
+
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+});
+</script>
+</body>
+</html>
